@@ -1,30 +1,20 @@
-import React from 'react'
+import react from "react";
 import Productos from '../productos/Productos'
 
 function Categorias() {
 
 
-  let unProducto =  Productos.map((prod) =>{
-        {prod.description}
-})
-
-console.log(unProducto);
-
-   
-
   return (
     <div className='categorias'>
-        <div className='populares' >
-
-
-    <h2>Las mas vendidas</h2>
-        </div>
-        <div className='accesibles' >
-    <h2>Precios accesibles</h2>
-        </div>
+      <h2>Los Mas Destacados</h2>
+      
+      <Productos/>
+      <div className='accesibles' >
+        <h2>Precios accesibles</h2>
+      </div>
     </div>
 
-    
+
   )
 }
 
