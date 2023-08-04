@@ -8,16 +8,19 @@ function Productos() {
   const productList = async () => {
     const data = await fetch('https://fakestoreapi.com/products')
     const products = await data.json()
-    setProductos(products)
+    setProductos(products) 
+
   }
 
   useEffect(() => {
     productList()
-  }, [])
+  }, []) // Para que se renderice una sola vez
+
+  let destacados = productos.filter(mayorPrecio => {return mayorPrecio.price > 30}) 
 
   return (
     <div>
-      {productos.map((props) => (
+      {destacados.map((props) => (
         <div className='card-products'>
           <img className='img-products' src={props.image} alt={props.title} />
           <p>{props.title}</p>
