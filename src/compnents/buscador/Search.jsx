@@ -2,7 +2,11 @@ import React from 'react'
 
 const Search = () => {
   return (
-    <input type="search" name="" id="" />
+    <div>
+        <input type="search" name="" id="" />
+        <img src="" alt="lupa buscador" />
+
+    </div>
   )
 }
 
