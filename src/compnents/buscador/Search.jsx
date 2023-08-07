@@ -1,11 +1,14 @@
 import React from 'react'
+import SearchIcon from '@mui/icons-material/Search';
+import './search.css'
 
 const Search = () => {
   return (
-    <div>
-        <input type="search" name="" id="" />
-        <img src="" alt="lupa buscador" />
+    <div className='search'>
+        <input type="search" name="" id=""/>
 
+        <SearchIcon
+        color='primary' fontSize='large'/>
     </div>
   )
 }
