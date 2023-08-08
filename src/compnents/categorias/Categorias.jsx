@@ -6,7 +6,7 @@ function Categorias() {
 
   return (
     <div className='categorias'>
-      <h2>Los Mas Destacados</h2>
+      <h2 className="titulo-destacado">Los Mas Destacados</h2>
       <Productos/> 
       <div className='accesibles' >
         <h2>Precios accesibles</h2>
