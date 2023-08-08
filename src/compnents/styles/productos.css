@@ -1,3 +1,47 @@
-.card-products .img-products{
-    max-width: 20%;
+
+.titulo-destacado{
+    margin-left: 10px;
 }
+
+/* Estilos para el contenedor de productos utilizando Grid */
+.contenedor-productos {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    gap: 15px;
+     /* Espacio entre las tarjetas de productos */
+    justify-items: center; /* Centra los elementos en el eje horizontal */
+
+  }
+  
+  /* Estilos para las tarjetas de productos */
+  .card-products {
+    max-height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra los elementos en el eje horizontal */
+  }
+  
+  /* Estilos para la imagen de los productos */
+  .img-products img {
+    align-items: center;
+    /* Asegura que la imagen no se desborde del contenedor */
+    max-height: 200px;
+    max-width: 80%;
+    /* Si deseas centrar también verticalmente la imagen */
+    align-self: center;
+  }
+  
+  .contenedor-texto{
+    text-align: center;
+    justify-content: center;
+  }
+
+  .img-products img{
+    max-height: 200px;
+    min-width: 100px;
+    object-fit: cover; 
+    }
+
+    .titulo{
+        margin-top: 30px;
+    }
