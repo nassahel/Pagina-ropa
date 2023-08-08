@@ -8,7 +8,7 @@ function Productos() {
   const productList = async () => {
     const data = await fetch('https://fakestoreapi.com/products')
     const products = await data.json()
-    setProductos(products) 
+    setProductos(products)
 
   }
 
@@ -16,15 +16,19 @@ function Productos() {
     productList()
   }, []) // Para que se renderice una sola vez
 
-  let destacados = productos.filter(mayorPrecio => {return mayorPrecio.price > 30}) 
+  let destacados = productos.filter(mayorPrecio => { return mayorPrecio.price > 30 })
 
   return (
-    <div>
+    <div className='contenedor-productos'>
       {destacados.map((props) => (
         <div className='card-products'>
-          <img className='img-products' src={props.image} alt={props.title} />
-          <p>{props.title}</p>
-          <p>{props.price}</p>
+          <div className='img-products'>
+            <img src={props.image} alt={props.title} />
+          </div>
+          <div className='contenedor-texto'>
+            <p className='titulo'>{props.title}</p>
+            <p className='precio'>${props.price}</p>
+          </div>
         </div>
       ))}
     </div>
