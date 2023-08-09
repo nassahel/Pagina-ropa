@@ -1,26 +1,26 @@
 import React, { useEffect, useState } from 'react'
-import '../styles/productos.css'
 
-function Productos() {
 
-  const [productos, setProductos] = useState([])
+function PreciosAccesibles() {
 
-  const productList = async () => {
+  const [accesibles, setAccesibles] = useState([])
+
+  const accesiblesList = async () => {
     const data = await fetch('https://fakestoreapi.com/products')
-    const products = await data.json()
-    setProductos(products)
+    const acces = await data.json()
+    setAccesibles(acces)
 
   }
 
   useEffect(() => {
-    productList()
+    accesiblesList()
   }, []) // Para que se renderice una sola vez
 
-  let destacados = productos.filter(mayorPrecio => { return mayorPrecio.price > 30 })
+  let preciosAccesibles = accesibles.filter(menorPrecio => { return menorPrecio.price < 30 })
 
   return (
     <div className='contenedor-productos'>
-      {destacados.map((props) => (
+      {preciosAccesibles.map((props) => (
         <div className='card-products'>
           <div className='img-products'>
             <img src={props.image} alt={props.title} />
@@ -35,4 +35,4 @@ function Productos() {
   )
 }
 
-export default Productos 
+export default PreciosAccesibles 
