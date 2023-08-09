@@ -5,10 +5,10 @@ import './search.css'
 const Search = () => {
   return (
     <div className='search'>
-        <input type="search" name="" id=""/>
+        <input type="search" name="" id="" placeholder='Buscar' />
 
-        <SearchIcon
-        color='primary' fontSize='large'/>
+        <SearchIcon className='search-icon'
+        fontSize='large'/>
     </div>
   )
 }
